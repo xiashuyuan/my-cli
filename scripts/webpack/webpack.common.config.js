@@ -1,8 +1,8 @@
 const path = require('path')
 
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
-const ProgressBarPlugin = require('webpackbar')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const WebpackBarPlugin = require('webpackbar')
 
 module.exports = {
   entry: { index: path.resolve(__dirname, '../../src/index.tsx') },
@@ -25,19 +25,16 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'less-loader'],
       },
     ]
   },
   plugins: [
     new CleanTerminalPlugin(),
-    new ProgressBarPlugin(),
+    new WebpackBarPlugin(),
     new ESLintPlugin({
-      extensions: ['js', 'jsx', 'ts', 'tsx']
+      extensions: ['js', 'jsx', 'ts', 'tsx'],
+      // failOnWarning: true
     })
   ],
   optimization: {
