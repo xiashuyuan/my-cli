@@ -12,7 +12,7 @@ module.exports = {
   },
   stats: 'error-warnings',
   resolve: {
-    extensions: ['.ts', '.tsx', 'js', 'jsx']
+    extensions: ['.ts', '.tsx', '.js', 'jsx']
   },
   module: {
     rules :[

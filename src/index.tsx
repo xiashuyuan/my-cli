@@ -1,5 +1,10 @@
-function hello(name: string) {
-  console.info(`hello ${name}`)
+import React from 'react';
+import { render } from 'react-dom';
+
+import { Hello } from './components/Hello';
+
+function App() {
+  return <Hello name="world" />;
 }
 
-hello('world')
+render(<App />, document.getElementById('react-mount-point'));
