@@ -1,0 +1,23 @@
+{
+  "name": "my-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "xiashuyuan <xsy1213soss@163.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config scripts/webpack/webpack.prod.config.js",
+    "dev": "webpack --config scripts/webpack/webpack.dev.config.js",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "clean-terminal-webpack-plugin": "^3.0.0",
+    "prettier": "^2.3.2",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0",
+    "webpack-merge": "^5.8.0",
+    "webpackbar": "^5.0.0-3"
+  }
+}
