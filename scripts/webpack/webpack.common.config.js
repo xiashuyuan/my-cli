@@ -2,6 +2,7 @@ const path = require('path')
 
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin')
 const ProgressBarPlugin = require('webpackbar')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 module.exports = {
   entry: { index: path.resolve(__dirname, '../../src/index.tsx') },
@@ -32,7 +33,13 @@ module.exports = {
       },
     ]
   },
-  plugins: [new CleanTerminalPlugin(), new ProgressBarPlugin()],
+  plugins: [
+    new CleanTerminalPlugin(),
+    new ProgressBarPlugin(),
+    new ESLintPlugin({
+      extensions: ['js', 'jsx', 'ts', 'tsx']
+    })
+  ],
   optimization: {
     usedExports: true
   }
