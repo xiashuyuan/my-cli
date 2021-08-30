@@ -1,4 +1,7 @@
 import React from 'react';
+import cn from 'classnames';
+
+import styles from './index.module.less';
 
 export interface HelloProps {
   className?: string;
@@ -6,5 +9,5 @@ export interface HelloProps {
 };
 
 export function Hello({ className, name }: HelloProps) {
-  return <div className={className}>Hello {name}</div>;
+  return <div className={cn(styles.container, className)}>Hello {name}</div>;
 }
